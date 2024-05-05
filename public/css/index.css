@@ -1,0 +1,11 @@
+:root {
+    --global-font: 'Manrope', sans-serif;
+    --handwritten-font: 'Qwigley', sans-serif;
+    --brand-font: 'Days One', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
