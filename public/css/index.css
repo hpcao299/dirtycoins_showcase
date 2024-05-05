@@ -156,3 +156,43 @@ main {
         transform: translateY(16px);
     }
 }
+
+.content {
+    display: flex;
+}
+
+.content-item {
+    width: 50%;
+}
+
+.content-img {
+    width: 100%;
+    height: auto;
+}
+
+.content-text-container {
+    padding-top: 2em;
+    padding-bottom: 5em;
+    padding-left: 2em;
+}
+
+.content-item.content-text-container:first-child {
+    padding-top: 2em;
+    padding-left: 0;
+    padding-right: 2em;
+}
+
+.content-heading {
+    font-family: var(--handwritten-font);
+    font-size: 128px;
+    line-height: 128px;
+    margin-bottom: 32px;
+}
+
+.content-text {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    text-align: justify;
+    text-indent: 4em;
+}
