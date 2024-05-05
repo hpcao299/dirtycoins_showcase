@@ -2,10 +2,157 @@
     --global-font: 'Manrope', sans-serif;
     --handwritten-font: 'Qwigley', sans-serif;
     --brand-font: 'Days One', sans-serif;
+
+    --black: #000;
 }
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: var(--global-font);
+    font-weight: 700;
+    color: var(--black);
+}
+
+/* Global Classes */
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5em 3.47em;
+    position: relative;
+}
+
+/* Nav */
+
+.nav {
+    padding: 2.5em 2.5em 2.5em 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.nav-logo img {
+    height: 70px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.nav-links a {
+    padding: 4px 8px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.nav-link-text {
+    display: block;
+    position: relative;
+}
+
+.nav-links .nav-link-text::after {
+    position: absolute;
+    border-radius: 4px;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.6);
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+.nav-links a:hover .nav-link-text::after,
+.nav-links a:focus .nav-link-text::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+/* Main */
+main {
+    min-height: 100vh;
+}
+
+.starter-logo-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--brand-font);
+    text-align: center;
+}
+
+.starter-logo-text {
+    display: flex;
+    align-items: center;
+    font-size: 76px;
+    line-height: 68px;
+}
+
+.starter-logo-text img {
+    width: 64px;
+    height: 64px;
+    margin-left: 8px;
+}
+
+.starter-logo-made-in-vietnam {
+    font-size: 36px;
+}
+
+.starter-logo-swipe-down {
+    font-family: var(--global-font);
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.starter-logo-swipe-down-icon {
+    margin-top: 12px;
+
+    animation: up-and-down 3s infinite;
+}
+
+@keyframes up-and-down {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(16px);
+    }
 }
