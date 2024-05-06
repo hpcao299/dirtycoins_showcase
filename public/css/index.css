@@ -22,6 +22,46 @@ body {
 
 /* Global Classes */
 
+[xyz~='delay-11'] {
+    --xyz-delay: 1100ms !important;
+}
+
+[xyz~='delay-12'] {
+    --xyz-delay: 1200ms !important;
+}
+
+[xyz~='delay-15'] {
+    --xyz-delay: 1500ms !important;
+}
+
+[xyz~='delay-17'] {
+    --xyz-delay: 1700ms !important;
+}
+
+[xyz~='delay-18'] {
+    --xyz-delay: 1800ms !important;
+}
+
+[xyz~='delay-19'] {
+    --xyz-delay: 1900ms !important;
+}
+
+[xyz~='delay-20'] {
+    --xyz-delay: 2000ms !important;
+}
+
+[xyz~='delay-21'] {
+    --xyz-delay: 2100ms !important;
+}
+
+[xyz~='delay-22'] {
+    --xyz-delay: 2200ms !important;
+}
+
+[xyz~='delay-23'] {
+    --xyz-delay: 2300ms !important;
+}
+
 .container {
     width: 100%;
     margin-left: auto;
@@ -111,6 +151,18 @@ main {
     text-align: center;
 }
 
+.starter-logo-first-text-container {
+    position: absolute;
+    top: 128px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.starter-logo-first-text {
+    font-size: 22px;
+    font-family: var(--global-font);
+}
+
 .starter-logo-text {
     display: flex;
     align-items: center;
@@ -190,10 +242,6 @@ main {
     z-index: -1;
     width: 100%;
     height: 100%;
-}
-
-[xyz~='delay-12'] {
-    --xyz-delay: 1200ms !important;
 }
 
 section:nth-child(even) .content-img-frame {
