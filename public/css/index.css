@@ -26,14 +26,15 @@ body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding: 5em 3.47em;
+    margin-top: 128px;
+    margin-bottom: 128px;
+    padding: 0 70px;
     position: relative;
 }
 
 /* Nav */
-
 .nav {
-    padding: 2.5em 2.5em 2.5em 3.5em;
+    padding: 1em 2.5em 1em 3.5em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -170,16 +171,48 @@ main {
     height: auto;
 }
 
+.content-img-wrapper {
+    position: relative;
+}
+
+.content-img-wrapper img {
+    border-radius: 4px;
+}
+
+.content-img-frame {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    right: -20px;
+    bottom: -20px;
+    border: 6px solid #000;
+    border-radius: 4px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+[xyz~='delay-12'] {
+    --xyz-delay: 1200ms !important;
+}
+
+section:nth-child(even) .content-img-frame {
+    right: 20px;
+    top: 20px;
+    left: -20px;
+    bottom: -20px;
+}
+
 .content-text-container {
     padding-top: 2em;
     padding-bottom: 5em;
-    padding-left: 2em;
+    padding-left: 3em;
 }
 
 .content-item.content-text-container:first-child {
     padding-top: 2em;
     padding-left: 0;
-    padding-right: 2em;
+    padding-right: 3em;
 }
 
 .content-heading {
@@ -191,7 +224,7 @@ main {
 
 .content-text {
     font-size: 20px;
-    line-height: 1.4;
+    line-height: 1.8;
     margin-bottom: 12px;
     text-align: justify;
     text-indent: 4em;
