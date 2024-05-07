@@ -22,6 +22,14 @@ body {
 
 /* Global Classes */
 
+[xyz~='duration-11'] {
+    --xyz-duration: 1100ms !important;
+}
+
+[xyz~='duration-12'] {
+    --xyz-duration: 1200ms !important;
+}
+
 [xyz~='delay-11'] {
     --xyz-delay: 1100ms !important;
 }
@@ -60,6 +68,74 @@ body {
 
 [xyz~='delay-23'] {
     --xyz-delay: 2300ms !important;
+}
+
+[xyz~='delay-24'] {
+    --xyz-delay: 2400ms !important;
+}
+
+[xyz~='delay-25'] {
+    --xyz-delay: 2500ms !important;
+}
+
+[xyz~='delay-26'] {
+    --xyz-delay: 2600ms !important;
+}
+
+[xyz~='delay-27'] {
+    --xyz-delay: 2700ms !important;
+}
+
+[xyz~='delay-28'] {
+    --xyz-delay: 2800ms !important;
+}
+
+[xyz~='delay-29'] {
+    --xyz-delay: 2900ms !important;
+}
+
+[xyz~='delay-30'] {
+    --xyz-delay: 3000ms !important;
+}
+
+[xyz~='delay-31'] {
+    --xyz-delay: 3100ms !important;
+}
+
+[xyz~='delay-32'] {
+    --xyz-delay: 3200ms !important;
+}
+
+[xyz~='delay-33'] {
+    --xyz-delay: 3300ms !important;
+}
+
+[xyz~='delay-34'] {
+    --xyz-delay: 3400ms !important;
+}
+
+[xyz~='delay-35'] {
+    --xyz-delay: 3500ms !important;
+}
+
+[xyz~='delay-36'] {
+    --xyz-delay: 3600ms !important;
+}
+
+[xyz~='delay-37'] {
+    --xyz-delay: 3700ms !important;
+}
+
+[xyz~='delay-38'] {
+    --xyz-delay: 3800ms !important;
+}
+
+[xyz~='delay-39'] {
+    --xyz-delay: 3900ms !important;
+}
+
+[xyz~='delay-40'] {
+    --xyz-delay: 4000ms !important;
 }
 
 .container {
