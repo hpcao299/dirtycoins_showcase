@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const swipeDownContainer = document.querySelector('.starter-logo-swipe-down-container');
+
     function animateInElements(elementsArray) {
         elementsArray.forEach(element => {
             element.classList.remove('xyz-out');
@@ -14,8 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     new fullpage('#fullpage', {
-        controlArrows: false,
-        scrollbar: true,
+        loopBottom: false,
+        loopTop: false,
+        keyboardScrolling: true,
         onLeave(origin, destination, direction, trigger) {
             const currentSection = origin.item;
             const nextSection = destination.item;
@@ -26,10 +29,14 @@ document.addEventListener('DOMContentLoaded', function () {
             animateOutElements(animatedOutElements);
 
             animateInElements(animatedInElements);
+
+            swipeDownContainer.style.display = 'none';
         },
     });
 
-    async function starterSection() {
+    function longStarter() {
+        localStorage.setItem('hasVisited', 'true');
+        document.body.style.overflow = 'hidden';
         const starterImagesContainer = document.querySelector('.starter-images-container');
 
         const animatedStarterImages = starterImagesContainer.querySelectorAll('.item-group > *');
@@ -46,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 const animatedStarterElements =
                     starterLogoContainer.querySelectorAll('.item-group > *');
 
+                starterImagesContainer.style = 'display:none;';
+
                 animateInElements(animatedStarterElements);
 
                 const animateInTime = 2000;
@@ -54,10 +63,33 @@ document.addEventListener('DOMContentLoaded', function () {
                     const navContent = document.querySelector('.nav-content');
 
                     navContent.classList.add('nav-content-in');
+
+                    document.body.style.overflow = 'unset';
                 }, animateInTime);
             }, 1000);
         }, animateInTime + 1800);
     }
 
-    starterSection();
+    function shortStarter() {
+        const starterImagesContainer = document.querySelector('.starter-images-container');
+
+        starterImagesContainer.style = 'display:none;';
+
+        const navContent = document.querySelector('.nav-content');
+
+        navContent.classList.add('nav-content-in');
+
+        const starterLogoContainer = document.querySelector('.starter-logo-container');
+        const animatedStarterElements = starterLogoContainer.querySelectorAll('.item-group > *');
+
+        animateInElements(animatedStarterElements);
+    }
+
+    const hasVisited = localStorage.getItem('hasVisited');
+
+    if (!hasVisited) {
+        longStarter();
+    } else {
+        shortStarter();
+    }
 });
