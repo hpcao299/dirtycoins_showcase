@@ -22,120 +22,132 @@ body {
 
 /* Global Classes */
 
-[xyz~='duration-11'] {
-    --xyz-duration: 1100ms !important;
+[xyz~='in-duration-11'] {
+    --xyz-in-duration: 1100ms !important;
 }
 
-[xyz~='duration-12'] {
-    --xyz-duration: 1200ms !important;
+[xyz~='in-duration-12'] {
+    --xyz-in-duration: 1200ms !important;
 }
 
-[xyz~='delay-11'] {
-    --xyz-delay: 1100ms !important;
+[xyz~='in-delay-11'] {
+    --xyz-in-delay: 1100ms !important;
 }
 
-[xyz~='delay-12'] {
-    --xyz-delay: 1200ms !important;
+[xyz~='in-delay-12'] {
+    --xyz-in-delay: 1200ms !important;
 }
 
-[xyz~='delay-15'] {
-    --xyz-delay: 1500ms !important;
+[xyz~='in-delay-13'] {
+    --xyz-in-delay: 1300ms !important;
 }
 
-[xyz~='delay-17'] {
-    --xyz-delay: 1700ms !important;
+[xyz~='in-delay-15'] {
+    --xyz-in-delay: 1500ms !important;
 }
 
-[xyz~='delay-18'] {
-    --xyz-delay: 1800ms !important;
+[xyz~='in-delay-17'] {
+    --xyz-in-delay: 1700ms !important;
 }
 
-[xyz~='delay-19'] {
-    --xyz-delay: 1900ms !important;
+[xyz~='in-delay-18'] {
+    --xyz-in-delay: 1800ms !important;
 }
 
-[xyz~='delay-20'] {
-    --xyz-delay: 2000ms !important;
+[xyz~='in-delay-19'] {
+    --xyz-in-delay: 1900ms !important;
 }
 
-[xyz~='delay-21'] {
-    --xyz-delay: 2100ms !important;
+[xyz~='in-delay-20'] {
+    --xyz-in-delay: 2000ms !important;
 }
 
-[xyz~='delay-22'] {
-    --xyz-delay: 2200ms !important;
+[xyz~='in-delay-21'] {
+    --xyz-in-delay: 2100ms !important;
 }
 
-[xyz~='delay-23'] {
-    --xyz-delay: 2300ms !important;
+[xyz~='in-delay-22'] {
+    --xyz-in-delay: 2200ms !important;
 }
 
-[xyz~='delay-24'] {
-    --xyz-delay: 2400ms !important;
+[xyz~='in-delay-23'] {
+    --xyz-in-delay: 2300ms !important;
 }
 
-[xyz~='delay-25'] {
-    --xyz-delay: 2500ms !important;
+[xyz~='in-delay-24'] {
+    --xyz-in-delay: 2400ms !important;
 }
 
-[xyz~='delay-26'] {
-    --xyz-delay: 2600ms !important;
+[xyz~='in-delay-25'] {
+    --xyz-in-delay: 2500ms !important;
 }
 
-[xyz~='delay-27'] {
-    --xyz-delay: 2700ms !important;
+[xyz~='in-delay-26'] {
+    --xyz-in-delay: 2600ms !important;
 }
 
-[xyz~='delay-28'] {
-    --xyz-delay: 2800ms !important;
+[xyz~='in-delay-27'] {
+    --xyz-in-delay: 2700ms !important;
 }
 
-[xyz~='delay-29'] {
-    --xyz-delay: 2900ms !important;
+[xyz~='in-delay-28'] {
+    --xyz-in-delay: 2800ms !important;
 }
 
-[xyz~='delay-30'] {
-    --xyz-delay: 3000ms !important;
+[xyz~='in-delay-29'] {
+    --xyz-in-delay: 2900ms !important;
 }
 
-[xyz~='delay-31'] {
-    --xyz-delay: 3100ms !important;
+[xyz~='in-delay-30'] {
+    --xyz-in-delay: 3000ms !important;
 }
 
-[xyz~='delay-32'] {
-    --xyz-delay: 3200ms !important;
+[xyz~='in-delay-31'] {
+    --xyz-in-delay: 3100ms !important;
 }
 
-[xyz~='delay-33'] {
-    --xyz-delay: 3300ms !important;
+[xyz~='in-delay-32'] {
+    --xyz-in-delay: 3200ms !important;
 }
 
-[xyz~='delay-34'] {
-    --xyz-delay: 3400ms !important;
+[xyz~='in-delay-33'] {
+    --xyz-in-delay: 3300ms !important;
 }
 
-[xyz~='delay-35'] {
-    --xyz-delay: 3500ms !important;
+[xyz~='in-delay-34'] {
+    --xyz-in-delay: 3400ms !important;
 }
 
-[xyz~='delay-36'] {
-    --xyz-delay: 3600ms !important;
+[xyz~='in-delay-35'] {
+    --xyz-in-delay: 3500ms !important;
 }
 
-[xyz~='delay-37'] {
-    --xyz-delay: 3700ms !important;
+[xyz~='in-delay-36'] {
+    --xyz-in-delay: 3600ms !important;
 }
 
-[xyz~='delay-38'] {
-    --xyz-delay: 3800ms !important;
+[xyz~='in-delay-37'] {
+    --xyz-in-delay: 3700ms !important;
 }
 
-[xyz~='delay-39'] {
-    --xyz-delay: 3900ms !important;
+[xyz~='in-delay-38'] {
+    --xyz-in-delay: 3800ms !important;
 }
 
-[xyz~='delay-40'] {
-    --xyz-delay: 4000ms !important;
+[xyz~='in-delay-39'] {
+    --xyz-in-delay: 3900ms !important;
+}
+
+[xyz~='in-delay-40'] {
+    --xyz-in-delay: 4000ms !important;
+}
+
+[xyz~='in-delay-42'] {
+    --xyz-in-delay: 4200ms !important;
+}
+
+[xyz~='in-delay-45'] {
+    --xyz-in-delay: 4500ms !important;
 }
 
 .container {
@@ -150,15 +162,24 @@ body {
 
 /* Nav */
 .nav {
-    padding: 1em 2.5em 1em 3.5em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
+}
+
+.nav-content {
+    padding: 1em 2.5em 1em 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.6s ease;
+    transform: translateY(-100%);
+}
+
+.nav-content-in {
+    transform: translateY(0);
 }
 
 .nav-logo img {
@@ -215,6 +236,12 @@ main {
     min-height: 100vh;
 }
 
+.starter-top-text {
+    font-size: 28px;
+    font-family: var(--brand-font);
+    font-weight: 700;
+}
+
 .starter-logo-container {
     position: relative;
     height: 100vh;
@@ -256,17 +283,20 @@ main {
     font-size: 36px;
 }
 
-.starter-logo-swipe-down {
-    font-family: var(--global-font);
+.starter-logo-swipe-down-container {
     position: absolute;
     left: 50%;
     bottom: 40px;
     transform: translateX(-50%);
+}
+
+.starter-logo-swipe-down {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 18px;
+    font-family: var(--global-font);
 }
 
 .starter-logo-swipe-down-icon {
