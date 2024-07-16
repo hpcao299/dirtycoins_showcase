@@ -7,14 +7,50 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Days+One&family=Manrope:wght@200..800&family=Qwigley&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Days+One&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Qwigley&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" type="text/css" href="/public/css/index.css" />
+
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"
         />
+        <script>
+            window.fp_scrollHorizontallyExtension = function () {
+                var e = this,
+                    n = window.fp_utils,
+                    a = window.fullpage_api,
+                    c = n,
+                    d = n.$,
+                    t = a.getFullpageData(),
+                    f = t.options,
+                    i = t.internals,
+                    s = '.fp-section',
+                    p = '.fp-slide';
+                (e.getScrollSection = function (e, n) {
+                    var t,
+                        i = d('.fp-section.active')[0],
+                        o = d(p, i).length,
+                        l = f.scrollHorizontally && 1 < o,
+                        r = 1 === d(s).length;
+                    if (l)
+                        if (((t = d('.fp-slide.active', i)[0]), 'down' === e)) {
+                            if (c.index(t) + 1 !== o || r) return a.moveSlideRight;
+                        } else if (c.index(t) || r) return a.moveSlideLeft;
+                    return n;
+                }),
+                    (e.c = i.c);
+                var o = e['common'.charAt(0)];
+                return (
+                    'complete' === document.readyState && o('scrollHorizontally'),
+                    window.addEventListener('load', function () {
+                        o('scrollHorizontally');
+                    }),
+                    e
+                );
+            };
+        </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core" />
 
@@ -191,15 +227,15 @@
                 </div> -->
 
                 <div class="starter-logo-container">
-                    <div class="item-group" xyz="fade-100% in-duration-8 out-duration-0">
+                    <div class="item-group starter-text" xyz="fade-100% in-duration-8">
                         <div class="starter-logo-text xyz-out">
                             <div>DIRTYCOINS</div>
                             <img src="/public/img/signature_rounded.png" alt="Logo Without Text" />
                         </div>
                     </div>
                     <div
-                        class="item-group"
-                        xyz="fade-100% in-down-2 in-delay-8 in-duration-8 out-duration-0"
+                        class="item-group starter-text"
+                        xyz="fade-100% in-down-2 in-delay-8 in-duration-8"
                     >
                         <div class="starter-logo-made-in-vietnam xyz-out">madeinvietnam</div>
                     </div>
@@ -221,24 +257,24 @@
                 <div class="container">
                     <div class="content">
                         <div class="content-item content-img-wrapper">
-                            <div class="item-group" xyz="fade-100% right-5 duration-7 delay-8">
+                            <div class="item-group" xyz="fade-100% right-5 duration-7 delay-11">
                                 <img
                                     src="/public/img/content_1.jpeg"
                                     alt="Content img"
                                     class="content-img xyz-out"
                                 />
                             </div>
-                            <div class="item-group" xyz="fade-100% ease right-2 up-2 delay-12">
+                            <div class="item-group" xyz="fade-100% ease right-2 up-2 delay-16">
                                 <div class="content-img-frame xyz-out"></div>
                             </div>
                         </div>
                         <div class="content-item content-text-container">
-                            <div class="item-group" xyz="fade-100% down-4 delay-4">
+                            <div class="item-group" xyz="fade-100% down-4 delay-6">
                                 <h2 class="content-heading xyz-out">
                                     Tiền thân của Localbrand được yêu thích nhất
                                 </h2>
                             </div>
-                            <div class="item-group" xyz="fade-100% down-4 delay-8">
+                            <div class="item-group" xyz="fade-100% down-4 delay-11">
                                 <p class="content-text xyz-out">
                                     Con đường chinh phục Streetwear của thương hiệu DirtyCoins được
                                     bắt đầu từ 2017 tại Sài Gòn - Việt Nam, xuất phát ý tưởng về một
@@ -263,38 +299,36 @@
                 <div class="container">
                     <div class="content">
                         <div class="content-item content-text-container">
-                            <div class="item-group" xyz="fade-100% down-4">
-                                <h2 class="content-heading xyz-out">
-                                    Tiền thân của Localbrand được yêu thích nhất
-                                </h2>
+                            <div class="item-group" xyz="fade-100% down-4 delay-6">
+                                <h2 class="content-heading xyz-out">Nhà sáng lập của DirtyCoins</h2>
                             </div>
-                            <div class="item-group" xyz="fade-100% down-4 delay-8">
+                            <div class="item-group" xyz="fade-100% down-4 delay-11">
                                 <p class="content-text xyz-out">
-                                    Con đường chinh phục Streetwear của thương hiệu DirtyCoins được
-                                    bắt đầu từ 2017 tại Sài Gòn - Việt Nam, xuất phát ý tưởng về một
-                                    thương hiệu Việt mang văn hóa đường phố. Với tiền thân là The
-                                    Yars Shop – chuyên kinh doanh trang phục thể thao dành cho nam
-                                    giới. The Yars Shop không có nhận diện hay bản sắc thương hiệu
-                                    rõ ràng, sớm trở thành một nỗ lực kinh doanh không mấy thành
-                                    công từ thuở đầu.
+                                    Khoa Xian, nhà sáng lập DirtyCoins, đã tạo ra dấu ấn đáng kể
+                                    trong làng thời trang đường phố tại Việt Nam. Sinh năm 1996, anh
+                                    đã xây dựng DirtyCoins thành một thương hiệu được công nhận rộng
+                                    rãi, phổ biến trong cả cộng đồng chính thống và ngầm. Phong cách
+                                    đặc trưng của thương hiệu, được định hình bởi những thiết kế độc
+                                    đáo và ảnh hưởng văn hóa mạnh mẽ, đã thu hút sự chú ý của những
+                                    nhân vật nổi bật trong làng âm nhạcn.
                                 </p>
                                 <p class="content-text xyz-out">
-                                    Bù lại, kinh nghiệm và sự cầu tiến từ thất bại của The Yars Shop
-                                    là bước đệm lớn giúp DirtyCoins được xây dựng nên từ doanh thu
-                                    khiêm tốn của The Yars Shop với tâm huyết và tinh thần của tuổi
-                                    trẻ từ năm 2017.
+                                    Phong cách lãnh đạo và thương hiệu cá nhân của Khoa Xian đóng
+                                    vai trò quan trọng trong việc định hình văn hóa công ty. Anh
+                                    nhấn mạnh tầm quan trọng của việc duy trì một bản sắc riêng
+                                    không dễ dàng bị sao chép.
                                 </p>
                             </div>
                         </div>
                         <div class="content-item content-img-wrapper">
-                            <div class="item-group" xyz="fade-100% left-5 duration-7 delay-8">
+                            <div class="item-group" xyz="fade-100% left-5 duration-7 delay-11">
                                 <img
-                                    src="/public/img/content_1.jpeg"
+                                    src="/public/img/content_2.webp"
                                     alt="Content img"
                                     class="content-img xyz-out"
                                 />
                             </div>
-                            <div class="item-group" xyz="fade-100% ease left-2 up-2 delay-12">
+                            <div class="item-group" xyz="fade-100% ease left-2 up-2 delay-16">
                                 <div class="content-img-frame xyz-out"></div>
                             </div>
                         </div>
@@ -305,38 +339,36 @@
                 <div class="container">
                     <div class="content">
                         <div class="content-item content-img-wrapper">
-                            <div class="item-group" xyz="fade-100% right-5 duration-7 delay-8">
+                            <div class="item-group" xyz="fade-100% right-5 duration-7 delay-11">
                                 <img
-                                    src="/public/img/content_1.jpeg"
+                                    src="/public/img/content_3.jpg"
                                     alt="Content img"
                                     class="content-img xyz-out"
                                 />
                             </div>
-                            <div class="item-group" xyz="fade-100% ease right-2 up-2 delay-12">
+                            <div class="item-group" xyz="fade-100% ease right-2 up-2 delay-16">
                                 <div class="content-img-frame xyz-out"></div>
                             </div>
                         </div>
                         <div class="content-item content-text-container">
-                            <div class="item-group" xyz="fade-100% down-4 delay-4">
+                            <div class="item-group" xyz="fade-100% down-4 delay-6">
                                 <h2 class="content-heading xyz-out">
-                                    Tiền thân của Localbrand được yêu thích nhất
+                                    Hành trình phát triển - Khẳng định thương hiệu
                                 </h2>
                             </div>
-                            <div class="item-group" xyz="fade-100% down-4 delay-8">
+                            <div class="item-group" xyz="fade-100% down-4 delay-11">
                                 <p class="content-text xyz-out">
-                                    Con đường chinh phục Streetwear của thương hiệu DirtyCoins được
-                                    bắt đầu từ 2017 tại Sài Gòn - Việt Nam, xuất phát ý tưởng về một
-                                    thương hiệu Việt mang văn hóa đường phố. Với tiền thân là The
-                                    Yars Shop – chuyên kinh doanh trang phục thể thao dành cho nam
-                                    giới. The Yars Shop không có nhận diện hay bản sắc thương hiệu
-                                    rõ ràng, sớm trở thành một nỗ lực kinh doanh không mấy thành
-                                    công từ thuở đầu.
+                                    Dirty Coins đã dần có những bước phát triển đầy ấn tượng, trở
+                                    thành "top of mind" của đông đảo giới trẻ, với hơn 1 triệu
+                                    follower trên từng nền tảng Instagram - Facebook cùng hệ thống
+                                    hơn 10 cửa hàng phủ sóng tại nhiều thành lớn.
                                 </p>
                                 <p class="content-text xyz-out">
-                                    Bù lại, kinh nghiệm và sự cầu tiến từ thất bại của The Yars Shop
-                                    là bước đệm lớn giúp DirtyCoins được xây dựng nên từ doanh thu
-                                    khiêm tốn của The Yars Shop với tâm huyết và tinh thần của tuổi
-                                    trẻ từ năm 2017.
+                                    Đến nay, Dirty Coins đã quá quen thuộc và tạo dựng được chỗ đứng
+                                    vững chắc trên thị trường streetwear Việt Nam. Thật không quá
+                                    khi nói rằng thương hiệu này đang là đại diện cho một phong cách
+                                    sống của giới trẻ hiện đại, dám thử thách và không ngừng tạo ra
+                                    đột phá.
                                 </p>
                             </div>
                         </div>
@@ -347,39 +379,288 @@
                 <div class="container">
                     <div class="content">
                         <div class="content-item content-text-container">
-                            <div class="item-group" xyz="fade-100% down-4">
+                            <div class="item-group" xyz="fade-100% down-4 delay-6">
                                 <h2 class="content-heading xyz-out">
-                                    Tiền thân của Localbrand được yêu thích nhất
+                                    DirtyCoins đồng hành cùng những cái tên nổi bật
                                 </h2>
                             </div>
-                            <div class="item-group" xyz="fade-100% down-4 delay-8">
+                            <div class="item-group" xyz="fade-100% down-4 delay-11">
                                 <p class="content-text xyz-out">
-                                    Con đường chinh phục Streetwear của thương hiệu DirtyCoins được
-                                    bắt đầu từ 2017 tại Sài Gòn - Việt Nam, xuất phát ý tưởng về một
-                                    thương hiệu Việt mang văn hóa đường phố. Với tiền thân là The
-                                    Yars Shop – chuyên kinh doanh trang phục thể thao dành cho nam
-                                    giới. The Yars Shop không có nhận diện hay bản sắc thương hiệu
-                                    rõ ràng, sớm trở thành một nỗ lực kinh doanh không mấy thành
-                                    công từ thuở đầu.
+                                    Dirty Coins được nhiều thương hiệu, vlogger cũng như rapper đình
+                                    đám lựa chọn hợp tác vì sự năng động, vẻ đẹp cá tính và tạo thần
+                                    thái “chất” thông qua sự phối kết hợp các bộ đồ và phụ kiện.
+                                    Trong đó nổi bật là HIEUTHUHAI, Binz, Bray, Fabo, Double2T, ...
                                 </p>
                                 <p class="content-text xyz-out">
-                                    Bù lại, kinh nghiệm và sự cầu tiến từ thất bại của The Yars Shop
-                                    là bước đệm lớn giúp DirtyCoins được xây dựng nên từ doanh thu
-                                    khiêm tốn của The Yars Shop với tâm huyết và tinh thần của tuổi
-                                    trẻ từ năm 2017.
+                                    Cùng với sự bứt phá ngoạn mục của rap Việt trong năm nay là sự
+                                    đi lên của nhiều local brand. Chưa bao giờ những thương hiệu
+                                    "made in Việt Nam" được dân tình biết đến và yêu mến nhiều như
+                                    bây giờ. DirtyCoins đã rất hân hạnh khi được đồng hành cùng
+                                    chương trình RAP VIỆT, tài trợ các bộ đồ chuẩn "hip hop" cho các
+                                    rapper tham da chương trình.
                                 </p>
                             </div>
                         </div>
                         <div class="content-item content-img-wrapper">
-                            <div class="item-group" xyz="fade-100% left-5 duration-7 delay-8">
+                            <div class="item-group" xyz="fade-100% left-5 duration-7 delay-11">
                                 <img
-                                    src="/public/img/content_1.jpeg"
+                                    src="/public/img/content_4.jpeg"
                                     alt="Content img"
                                     class="content-img xyz-out"
                                 />
                             </div>
-                            <div class="item-group" xyz="fade-100% ease left-2 up-2 delay-12">
+                            <div class="item-group" xyz="fade-100% ease left-2 up-2 delay-16">
                                 <div class="content-img-frame xyz-out"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="slide">
+                    <div class="slide-container">
+                        <div class="slide-preview">
+                            <div
+                                class="slide-heading item-group"
+                                xyz="fade-100% delay-5 duration-6"
+                            >
+                                <div class="xyz-out">DIRTYCOINS</div>
+                            </div>
+                            <div
+                                class="slide-heading item-group"
+                                xyz="fade-100% small-5 delay-10 duration-7"
+                            >
+                                <div class="xyz-out">COLLABORATIONS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-container">
+                        <div class="slide-content">
+                            <div class="slide-collab">
+                                <div class="item-group" xyz="fade-100% delay-9 left-4 duration-7">
+                                    <div class="xyz-out">DIRTYCOINS</div>
+                                </div>
+                                <div
+                                    class="item-group"
+                                    xyz="delay-4 fade-100% rotate-left-25% duration-6"
+                                >
+                                    <div class="xyz-out">X</div>
+                                </div>
+                                <div class="item-group" xyz="fade-100% delay-9 right-4 duration-7">
+                                    <div class="xyz-out">LA LUNE</div>
+                                </div>
+                            </div>
+                            <div class="slide-video">
+                                <div class="slide-video-container">
+                                    <a
+                                        href="https://www.instagram.com/p/C5iqRFcSQxA/"
+                                        target="_blank"
+                                    >
+                                        <div
+                                            class="slide-video-border item-group"
+                                            xyz="fade-100% left-5 duration-7 delay-9"
+                                        >
+                                            <video preload="auto" class="xyz-out">
+                                                <source
+                                                    src="/public/vid/dirtycoins_x_lalune.mp4"
+                                                    type="video/mp4"
+                                                />
+                                                Đã có lỗi xảy ra.
+                                            </video>
+                                        </div>
+                                    </a>
+                                    <div
+                                        class="item-group"
+                                        xyz="fade-100% ease left-2 up-2 delay-17"
+                                    >
+                                        <div class="slide-video-frame"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-container">
+                        <div class="slide-content">
+                            <div class="slide-video">
+                                <div class="slide-video-container">
+                                    <a
+                                        href="https://www.instagram.com/p/C0T_njtRV8w/"
+                                        target="_blank"
+                                    >
+                                        <div
+                                            class="slide-video-border item-group"
+                                            xyz="fade-100% right-5 duration-7 delay-9"
+                                        >
+                                            <video preload="auto" class="xyz-out">
+                                                <source
+                                                    src="/public/vid/dirtycoins_x_double2t.mp4"
+                                                    type="video/mp4"
+                                                />
+                                                Đã có lỗi xảy ra.
+                                            </video>
+                                        </div>
+                                    </a>
+                                    <div
+                                        class="item-group"
+                                        xyz="fade-100% ease right-2 up-2 delay-17"
+                                    >
+                                        <div class="slide-video-frame"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-collab">
+                                <div class="item-group" xyz="fade-100% delay-9 right-4 duration-7">
+                                    <div class="xyz-out">DIRTYCOINS</div>
+                                </div>
+                                <div
+                                    class="item-group"
+                                    xyz="delay-4 fade-100% rotate-right-25% duration-6"
+                                >
+                                    <div class="xyz-out">X</div>
+                                </div>
+                                <div class="item-group" xyz="fade-100% delay-9 left-4 duration-7">
+                                    <div class="xyz-out">DOBULE2T</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-container">
+                        <div class="slide-content">
+                            <div class="slide-collab">
+                                <div class="item-group" xyz="fade-100% delay-9 left-4 duration-7">
+                                    <div class="xyz-out">DIRTYCOINS</div>
+                                </div>
+                                <div
+                                    class="item-group"
+                                    xyz="delay-4 fade-100% rotate-left-25% duration-6"
+                                >
+                                    <div class="xyz-out">X</div>
+                                </div>
+                                <div class="item-group" xyz="fade-100% delay-9 right-4 duration-7">
+                                    <div class="xyz-out">BRAY</div>
+                                </div>
+                            </div>
+                            <div class="slide-video">
+                                <div class="slide-video-container">
+                                    <a
+                                        href="https://www.instagram.com/p/C5iqRFcSQxA/"
+                                        target="_blank"
+                                    >
+                                        <div
+                                            class="slide-video-border item-group"
+                                            xyz="fade-100% left-5 duration-7 delay-9"
+                                        >
+                                            <video preload="auto" class="xyz-out">
+                                                <source
+                                                    src="/public/vid/dirtycoins_x_bray.mp4"
+                                                    type="video/mp4"
+                                                />
+                                                Đã có lỗi xảy ra.
+                                            </video>
+                                        </div>
+                                    </a>
+                                    <div
+                                        class="item-group"
+                                        xyz="fade-100% ease left-2 up-2 delay-17"
+                                    >
+                                        <div class="slide-video-frame"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-container">
+                        <div class="slide-content">
+                            <div class="slide-video">
+                                <div class="slide-video-container">
+                                    <a
+                                        href="https://dirtycoins.vn/dirtycoins-x-one-piece-season-2-mini-spring-drop"
+                                        target="_blank"
+                                    >
+                                        <div
+                                            class="slide-video-border item-group"
+                                            xyz="fade-100% right-5 duration-7 delay-9"
+                                        >
+                                            <img
+                                                src="/public/img/dirtycoins_x_one_piece.webp"
+                                                alt="DirtyCoins x One Piece"
+                                            />
+                                        </div>
+                                    </a>
+                                    <div
+                                        class="item-group"
+                                        xyz="fade-100% ease right-2 up-2 delay-17"
+                                    >
+                                        <div class="slide-video-frame"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-collab">
+                                <div class="item-group" xyz="fade-100% delay-9 right-4 duration-7">
+                                    <div class="xyz-out">DIRTYCOINS</div>
+                                </div>
+                                <div
+                                    class="item-group"
+                                    xyz="delay-4 fade-100% rotate-right-25% duration-6"
+                                >
+                                    <div class="xyz-out">X</div>
+                                </div>
+                                <div class="item-group" xyz="fade-100% delay-9 left-4 duration-7">
+                                    <div class="xyz-out">ONE PIECE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-container">
+                        <div class="slide-content">
+                            <div class="slide-collab">
+                                <div class="item-group" xyz="fade-100% delay-9 left-4 duration-7">
+                                    <div class="xyz-out">DIRTYCOINS</div>
+                                </div>
+                                <div
+                                    class="item-group"
+                                    xyz="delay-4 fade-100% rotate-left-25% duration-6"
+                                >
+                                    <div class="xyz-out">X</div>
+                                </div>
+                                <div class="item-group" xyz="fade-100% delay-9 right-4 duration-7">
+                                    <div class="xyz-out">16 TYPH</div>
+                                </div>
+                            </div>
+                            <div class="slide-video">
+                                <div class="slide-video-container">
+                                    <a
+                                        href="https://dirtycoins.vn/dirtycoins-x-16-typh-su-lot-ta-ch-n-thuc-cho-suc-tre-lieu-linh-ngong-cuong"
+                                        target="_blank"
+                                    >
+                                        <div
+                                            class="slide-video-border item-group"
+                                            xyz="fade-100% left-5 duration-7 delay-9"
+                                        >
+                                            <img
+                                                src="/public/img/dirtycoins_x_16typh.jpg"
+                                                alt="DirtyCoins x 16Typh"
+                                                class="xyz-out"
+                                            />
+                                        </div>
+                                    </a>
+                                    <div
+                                        class="item-group"
+                                        xyz="fade-100% ease left-2 up-2 delay-17"
+                                    >
+                                        <div class="slide-video-frame"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
