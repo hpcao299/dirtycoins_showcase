@@ -379,6 +379,7 @@ body {
     transform: translateY(10px);
 }
 
+.nav-link-text.active::after,
 .nav-links a:hover .nav-link-text::after,
 .nav-links a:focus .nav-link-text::after {
     opacity: 1;
