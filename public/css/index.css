@@ -168,6 +168,10 @@ body {
     --xyz-in-delay: 5200ms !important;
 }
 
+[xyz~='in-delay-78'] {
+    --xyz-in-delay: 7800ms !important;
+}
+
 /* Delay */
 
 [xyz~='delay-12'] {
@@ -326,7 +330,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: transform 0.6s ease;
+    transition: transform 0.6s ease 7.2s;
     transform: translateY(-100%);
 }
 
@@ -687,7 +691,7 @@ body .fp-tooltip.fp-right {
 
 #fp-nav.fp-right {
     opacity: 0 !important;
-    transition: opacity 0.6s ease;
+    transition: opacity 0.6s ease 7.2s;
 }
 
 /* Loading Screen */
