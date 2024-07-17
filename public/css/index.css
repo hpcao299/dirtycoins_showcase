@@ -164,6 +164,10 @@ body {
     --xyz-in-delay: 4500ms !important;
 }
 
+[xyz~='in-delay-52'] {
+    --xyz-in-delay: 5200ms !important;
+}
+
 /* Delay */
 
 [xyz~='delay-12'] {
@@ -490,9 +494,9 @@ main {
 
 .content-img-frame {
     position: absolute;
-    left: 20px;
+    right: 20px;
     top: 20px;
-    right: -20px;
+    left: -20px;
     bottom: -20px;
     border: 6px solid #000;
     border-radius: 4px;
@@ -502,9 +506,9 @@ main {
 }
 
 section:nth-child(even) .content-img-frame {
-    right: 20px;
+    left: 20px;
     top: 20px;
-    left: -20px;
+    right: -20px;
     bottom: -20px;
 }
 
@@ -684,4 +688,210 @@ body .fp-tooltip.fp-right {
 #fp-nav.fp-right {
     opacity: 0 !important;
     transition: opacity 0.6s ease;
+}
+
+/* Loading Screen */
+.loading-screen {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loading-screen-starter {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+.loading-screen .signature-y {
+    width: 120px;
+    height: auto;
+    transition: width ease 0.9s;
+    transition-delay: 1s;
+}
+
+.loading-screen.loaded .signature-y {
+    width: 160px;
+}
+
+.loading-screen.loaded .progress-bar-container {
+    opacity: 0;
+}
+
+.progress-bar-container {
+    width: 200px;
+    height: 4px;
+    background-color: #f3f3f3;
+    border-radius: 12px;
+    overflow: hidden;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -40px;
+    transition: opacity 0.8s linear;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #000;
+    width: 0;
+    transition: width linear 0.6s;
+}
+
+.circular-border {
+    width: 350px;
+    height: 350px;
+    overflow: visible;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+.circular-border circle {
+    fill: none;
+    stroke: #000;
+    stroke-width: 16;
+    /* stroke-dasharray: 1099; 
+    stroke-dashoffset: 1099; */
+    stroke-dasharray: 1100; /* Slightly increased value to cover the gap */
+    stroke-dashoffset: 1100;
+}
+
+.loading-animation-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+}
+
+.loading-screen.loaded .circular-border circle {
+    animation: drawCircle 1s linear forwards;
+    animation-delay: 2s;
+}
+
+@keyframes drawCircle {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.loading-screen.loaded .circle-border {
+    opacity: 1;
+}
+
+.circle-border {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity ease 1s 3.2s;
+}
+
+.small-circle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.loading-screen.loaded .loading-signature-logo {
+    transform: scale(0.4);
+    top: 107px;
+    left: 77px;
+}
+
+.loading-signature-logo {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    transition: all ease 0.7s 4.2s;
+}
+
+.logo-hand {
+    width: 100%;
+    height: auto;
+    transition: opacity ease 0.8s 4.2s;
+    opacity: 0;
+}
+
+.loading-screen.loaded .logo-hand {
+    opacity: 1;
+}
+
+.logo-dirty-container {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-dirty-container img {
+    height: 164px;
+    width: auto;
+}
+
+.logo-coins-container {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-coins-container img {
+    height: 164px;
+    width: auto;
+}
+
+.logo-bullet-left-container,
+.logo-bullet-right-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo-bullet-left,
+.logo-bullet-right {
+    border-radius: 50%;
+    background-color: #000;
+    width: 40px;
+    height: 40px;
+}
+
+.logo-bullet-left-container {
+    right: calc(100% + 80px);
+}
+
+.logo-bullet-right-container {
+    left: calc(100% + 80px);
+}
+
+.loading-screen.loaded {
+    animation: fadeOut ease 0.7s 6.5s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden; /* Ensures the element is hidden after the animation */
+    }
 }
