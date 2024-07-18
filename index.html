@@ -78,10 +78,13 @@
                 );
             };
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+        <script
+            async
+            src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"
+        ></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core" />
 
-        <script type="text/javascript" src="/public/js/index.js"></script>
+        <script type="text/javascript" src="/public/js/index.js" async></script>
     </head>
     <body>
         <div class="loading-screen">
@@ -230,159 +233,6 @@
                 thiết kế mang đậm văn hoá đường phố.
             </h1>
             <section class="section starter-section">
-                <!-- <div class="starter-images-container">
-                    <div
-                        style="
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                        "
-                    >
-                        <div class="item-group" xyz="fade-100% small-5 in-delay-45 in-duration-8">
-                            <div class="starter-top-text">Top Localbrand tại Việt Nam</div>
-                        </div>
-                    </div>
-                    <div
-                        style="
-                            width: 15%;
-                            position: absolute;
-                            top: 5%;
-                            left: 4%;
-                            transform: rotate(-10deg);
-                        "
-                    >
-                        <div
-                            class="item-group"
-                            xyz="fade-100% small-5 in-delay-5 in-duration-11 small-5"
-                        >
-                            <img src="/public/img/vision-1.png" alt="Image" style="width: 100%" />
-                        </div>
-                    </div>
-                    <div
-                        style="
-                            width: 13%;
-                            position: absolute;
-                            top: 2%;
-                            right: 25%;
-                            transform: rotate(5deg);
-                        "
-                    >
-                        <div class="item-group" xyz="fade-100% small-5 in-delay-15 in-duration-10">
-                            <img src="/public/img/vision-2.jpg" alt="Image" style="width: 100%" />
-                        </div>
-                    </div>
-                    <div
-                        style="
-                            width: 20%;
-                            position: absolute;
-                            bottom: 5%;
-                            right: 3%;
-                            transform: rotate(2deg);
-                        "
-                    >
-                        <div class="item-group" xyz="fade-100% small-5 in-delay-20 in-duration-8">
-                            <img src="/public/img/wechoice_2.png" alt="Image" style="width: 100%" />
-                        </div>
-                    </div>
-                    <div
-                        style="
-                            width: 20%;
-                            position: absolute;
-                            top: 5%;
-                            right: 2%;
-                            transform: rotate(-7deg);
-                        "
-                    >
-                        <div class="item-group" xyz="fade-100% small-5 in-delay-25 in-duration-7">
-                            <img src="/public/img/wechoice_1.png" alt="Image" style="width: 100%" />
-                        </div>
-                    </div>
-                    <div
-                        style="
-                            width: 27%;
-                            position: absolute;
-                            bottom: 5%;
-                            left: 3%;
-                            transform: rotate(4deg);
-                        "
-                    >
-                        <div class="item-group" xyz="fade-100% small-5 in-delay-28 in-duration-7">
-                            <img src="/public/img/collab.jpg" alt="Image" style="width: 100%" />
-                        </div>
-                    </div>
-                    <div
-                        style="
-                            position: absolute;
-                            width: 15%;
-                            top: 1%;
-                            left: 40%;
-                            transform: rotate(-2deg);
-                        "
-                    >
-                        <div class="item-group" xyz="fade-100% small-5 in-delay-31 in-duration-9">
-                            <img src="public/img/cover.png" alt="Image" style="width: 100%" />
-                        </div>
-                    </div>
-                    <div
-                        style="
-                            width: 17%;
-                            position: absolute;
-                            right: 20%;
-                            bottom: 14%;
-                            transform: rotate(70deg);
-                        "
-                    >
-                        <div class="item-group" xyz="fade-100% small-5 in-delay-34 in-duration-9">
-                            <img src="public/img/dico.png" alt="Image" style="width: 100%" />
-                        </div>
-                    </div>
-                    <div
-                        style="
-                            width: 30%;
-                            position: absolute;
-                            bottom: 4%;
-                            left: 35%;
-                            transform: rotate(-3deg);
-                        "
-                    >
-                        <div class="item-group" xyz="fade-100% small-5 in-delay-29 in-duration-6">
-                            <img
-                                src="public/img/banner-chinh-2.png"
-                                alt="Image"
-                                style="width: 100%"
-                            />
-                        </div>
-                    </div>
-                    <div
-                        style="
-                            width: 13%;
-                            position: absolute;
-                            left: 21%;
-                            top: 5%;
-                            transform: rotate(3deg);
-                        "
-                    >
-                        <div class="item-group" xyz="fade-100% small-5 in-delay-36 in-duration-7">
-                            <img src="public/img/signature_y.png" alt="Image" style="width: 100%" />
-                        </div>
-                    </div>
-                </div> -->
-
-                <!-- <div class="starter-logo-without-text-container">
-                    <div
-                        style="
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                        "
-                    ></div>
-                    <div class="item-group" xyz="">
-                        <img src="/public/img/logo_without_text.png" alt="Image" />
-                    </div>
-                </div> -->
-
                 <div class="starter-logo-container">
                     <div class="item-group starter-text" xyz="fade-100% in-duration-8">
                         <div class="starter-logo-text xyz-out">
@@ -420,6 +270,7 @@
                                     src="/public/img/content_1.jpeg"
                                     alt="Content img"
                                     class="content-img xyz-out"
+                                    loading="lazy"
                                 />
                             </div>
                             <div class="item-group" xyz="fade-100% ease right-2 up-2 delay-16">
@@ -477,6 +328,7 @@
                                     src="/public/img/content_2.webp"
                                     alt="Content img"
                                     class="content-img xyz-out"
+                                    loading="lazy"
                                 />
                             </div>
                             <div class="item-group" xyz="fade-100% ease left-2 up-2 delay-16">
@@ -495,6 +347,7 @@
                                     src="/public/img/content_3.jpg"
                                     alt="Content img"
                                     class="content-img xyz-out"
+                                    loading="lazy"
                                 />
                             </div>
                             <div class="item-group" xyz="fade-100% ease right-2 up-2 delay-16">
@@ -554,6 +407,7 @@
                                     src="/public/img/content_4.jpeg"
                                     alt="Content img"
                                     class="content-img xyz-out"
+                                    loading="lazy"
                                 />
                             </div>
                             <div class="item-group" xyz="fade-100% ease left-2 up-2 delay-16">
@@ -739,6 +593,7 @@
                                             <img
                                                 src="/public/img/dirtycoins_x_one_piece.webp"
                                                 alt="DirtyCoins x One Piece"
+                                                loading="lazy"
                                             />
                                         </div>
                                     </a>
@@ -798,6 +653,7 @@
                                                 src="/public/img/dirtycoins_x_16typh.jpg"
                                                 alt="DirtyCoins x 16Typh"
                                                 class="xyz-out"
+                                                loading="lazy"
                                             />
                                         </div>
                                     </a>

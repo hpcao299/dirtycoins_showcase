@@ -15,9 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // initializeFullPage();
-    // mainApp();
-
     const progressBar = document.querySelector('.progress-bar');
 
     let images = document.images;
@@ -179,59 +176,3 @@ document.addEventListener('DOMContentLoaded', () => {
         shortStarter();
     }
 });
-
-// function longStarter() {
-//     const starterTexts = document.querySelectorAll('.starter-text');
-
-//     starterTexts.forEach(text => {
-//         const currentValue = text.getAttribute('xyz');
-
-//         text.setAttribute('xyz', currentValue + ' out-duration-0');
-//     });
-
-//     localStorage.setItem('hasVisited', 'true');
-//     document.body.style.overflow = 'hidden';
-//     const starterImagesContainer = document.querySelector('.starter-images-container');
-
-//     const animatedStarterImages =
-//         starterImagesContainer.querySelectorAll('.item-group > *');
-
-//     animateInElements(animatedStarterImages);
-
-//     const animateInTime = 4500;
-
-//     setTimeout(() => {
-//         animateOutElements(animatedStarterImages);
-
-//         setTimeout(() => {
-//             const starterLogoContainer = document.querySelector('.starter-logo-container');
-//             const animatedStarterElements =
-//                 starterLogoContainer.querySelectorAll('.item-group > *');
-
-//             starterImagesContainer.style = 'display:none;';
-
-//             animateInElements(animatedStarterElements);
-
-//             const animateInTime = 2000;
-
-//             setTimeout(() => {
-//                 const navContent = document.querySelector('.nav-content');
-//                 const bulletNav = document.querySelector('#fp-nav.fp-right');
-
-//                 navContent.classList.add('nav-content-in');
-//                 bulletNav.style = 'opacity: 1 !important;';
-
-//                 document.body.style.overflow = 'unset';
-
-//                 starterTexts.forEach(text => {
-//                     let currentValue = text.getAttribute('xyz');
-
-//                     const regex = new RegExp(`\\bout-duration-0\\b`, 'g');
-//                     currentValue = currentValue.replace(regex, '').trim();
-
-//                     text.setAttribute('xyz', currentValue + ' out-duration-8');
-//                 });
-//             }, animateInTime);
-//         }, 1000);
-//     }, animateInTime + 1800);
-// }
