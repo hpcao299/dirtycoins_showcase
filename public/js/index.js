@@ -72,15 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loopHorizontal: false,
             navigation: true,
             navigationPosition: 'right',
-            navigationTooltips: [
-                'DirtyCoins',
-                'Tiền thân',
-                'Nhà sáng lập',
-                'Hành trình',
-                'Đồng hành',
-                'Collaborations',
-                'Shop',
-            ],
+            navigationTooltips,
             onLeave(origin, destination, direction, trigger) {
                 const currentSection = origin.item;
                 const nextSection = destination.item;
