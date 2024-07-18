@@ -121,17 +121,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 const videoInCurrentSlide = currentSlide.querySelector('video');
                 const videoInNextSlide = nextSlide.querySelector('video');
 
-                if (videoInCurrentSlide) {
-                    setTimeout(() => {
-                        videoInCurrentSlide.pause();
-                    }, 800);
-                }
+                if (window.innerWidth > 768) {
+                    if (videoInCurrentSlide) {
+                        setTimeout(() => {
+                            videoInCurrentSlide.pause();
+                        }, 800);
+                    }
 
-                if (videoInNextSlide) {
-                    setTimeout(() => {
-                        videoInNextSlide.currentTime = 0;
-                        videoInNextSlide.play();
-                    }, 1000);
+                    if (videoInNextSlide) {
+                        setTimeout(() => {
+                            videoInNextSlide.currentTime = 0;
+                            videoInNextSlide.play();
+                        }, 1000);
+                    }
                 }
 
                 const animatedOutElements = currentSlide.querySelectorAll('.item-group > *');
