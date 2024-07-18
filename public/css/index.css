@@ -522,7 +522,6 @@ section:nth-child(even) .content-img-frame {
 
 .content-text-container {
     padding-top: 0;
-    padding-bottom: 5em;
     padding-left: 3em;
 }
 
@@ -924,6 +923,118 @@ body .fp-tooltip.fp-right {
     }
 }
 
+@media screen and (max-width: 1558px) {
+    .content-heading {
+        font-size: 96px;
+        line-height: 96px;
+        margin-bottom: 28px;
+    }
+
+    .slide-heading {
+        font-size: 68px;
+    }
+
+    .slide-content {
+        padding-top: 24px;
+    }
+
+    .slide-collab {
+        font-size: 64px;
+    }
+
+    .slide-video-border,
+    .slide-video video {
+        max-height: calc(80vh);
+    }
+
+    .starter-logo-text {
+        font-size: 68px;
+    }
+
+    .starter-logo-made-in-vietnam {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1340px) {
+    .content-text-container {
+        padding-left: 36px;
+    }
+
+    .content-heading {
+        font-size: 88px;
+        line-height: 88px;
+        margin-bottom: 8px;
+    }
+
+    .content-text {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 6px;
+    }
+
+    .slide-heading {
+        font-size: 60px;
+    }
+
+    .slide-content {
+        padding-top: 20px;
+    }
+
+    .slide-collab {
+        font-size: 56px;
+    }
+
+    .slide-video-border,
+    .slide-video video {
+        max-height: calc(60vh);
+    }
+
+    .starter-logo-text {
+        font-size: 60px;
+        line-height: 42px;
+    }
+
+    .starter-logo-made-in-vietnam {
+        font-size: 26px;
+    }
+
+    .starter-logo-text img {
+        height: 48px;
+        width: 48px;
+    }
+}
+
+@media screen and (max-width: 1116px) {
+    .content-text-container {
+        padding-left: 28px;
+    }
+
+    .content-heading {
+        font-size: 76px;
+        line-height: 72px;
+        margin-bottom: 10px;
+    }
+
+    .content-text {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 6px;
+    }
+
+    .slide-heading {
+        font-size: 56px;
+    }
+
+    .slide-content {
+        padding-top: 16px;
+    }
+
+    .slide-collab {
+        font-size: 50px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     :root {
         --small-logo-circle-size: 8px;
@@ -1012,8 +1123,8 @@ body .fp-tooltip.fp-right {
 
     .content-heading {
         font-size: 56px;
-        line-height: 56px;
-        margin-bottom: 10px;
+        line-height: 58px;
+        margin-bottom: 8px;
     }
 
     .content-text {
@@ -1101,5 +1212,10 @@ body .fp-tooltip.fp-right {
         top: 77px;
         left: 57px;
         transform: scale(0.34);
+    }
+
+    .slide-video-border,
+    .slide-video video {
+        max-height: calc(70vh);
     }
 }
