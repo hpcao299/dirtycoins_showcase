@@ -117,31 +117,53 @@
                             <div class="progress-bar"></div>
                         </div>
                     </div>
-                    <svg class="circular-border">
+                    <svg class="circular-border-desktop">
                         <circle cx="175" cy="175" r="175"></circle>
+                    </svg>
+
+                    <svg class="circular-border-tablet">
+                        <circle cx="130" cy="130" r="130"></circle>
                     </svg>
                     <div class="circle-border"></div>
 
                     <script>
                         const numCircles = 52; // Number of small circles
-                        const radius = 142; // Radius from the center of the circle to place small circles
-                        const circleBorder = document.querySelector('.circle-border');
 
-                        for (let i = 0; i < numCircles; i++) {
-                            const angle = (i * 360) / numCircles; // Angle in degrees
-                            const radians = angle * (Math.PI / 180); // Convert to radians
+                        function positionCircles() {
+                            const circleBorder = document.querySelector('.circle-border');
+                            const circleSize = parseFloat(
+                                getComputedStyle(document.documentElement).getPropertyValue(
+                                    '--small-logo-circle-size'
+                                )
+                            );
+                            const borderWidth = circleBorder.offsetWidth; // Get the current width of the circle-border
+                            const radius = borderWidth / 2 - circleSize / 2; // Adjusting for circle size
 
-                            const x = radius * Math.cos(radians) + circleBorder.offsetWidth / 2 - 8; // Adjusting for circle size
-                            const y =
-                                radius * Math.sin(radians) + circleBorder.offsetHeight / 2 - 8; // Adjusting for circle size
+                            circleBorder.innerHTML = ''; // Clear existing circles
 
-                            const smallCircle = document.createElement('div');
-                            smallCircle.className = 'small-circle';
-                            smallCircle.style.left = `${x}px`;
-                            smallCircle.style.top = `${y}px`;
+                            for (let i = 0; i < numCircles; i++) {
+                                const angle = (i * 360) / numCircles; // Angle in degrees
+                                const radians = angle * (Math.PI / 180); // Convert to radians
 
-                            circleBorder.appendChild(smallCircle);
+                                const x =
+                                    radius * Math.cos(radians) + borderWidth / 2 - circleSize / 2; // Adjusting for circle size
+                                const y =
+                                    radius * Math.sin(radians) + borderWidth / 2 - circleSize / 2; // Adjusting for circle size
+
+                                const smallCircle = document.createElement('div');
+                                smallCircle.className = 'small-circle';
+                                smallCircle.style.left = `${x}px`;
+                                smallCircle.style.top = `${y}px`;
+
+                                circleBorder.appendChild(smallCircle);
+                            }
                         }
+
+                        // Initial positioning
+                        positionCircles();
+
+                        // Reposition circles on window resize
+                        window.addEventListener('resize', positionCircles);
                     </script>
                 </div>
                 <img src="/public/img/logo_hand.png" alt="Logo hand" class="logo-hand" />
@@ -410,15 +432,12 @@
                                     bắt đầu từ 2017 tại Sài Gòn - Việt Nam, xuất phát ý tưởng về một
                                     thương hiệu Việt mang văn hóa đường phố. Với tiền thân là The
                                     Yars Shop – chuyên kinh doanh trang phục thể thao dành cho nam
-                                    giới. The Yars Shop không có nhận diện hay bản sắc thương hiệu
-                                    rõ ràng, sớm trở thành một nỗ lực kinh doanh không mấy thành
-                                    công từ thuở đầu.
+                                    giới.
                                 </p>
                                 <p class="content-text xyz-out">
-                                    Bù lại, kinh nghiệm và sự cầu tiến từ thất bại của The Yars Shop
-                                    là bước đệm lớn giúp DirtyCoins được xây dựng nên từ doanh thu
-                                    khiêm tốn của The Yars Shop với tâm huyết và tinh thần của tuổi
-                                    trẻ từ năm 2017.
+                                    The Yars Shop là bước đệm lớn giúp DirtyCoins được xây dựng nên
+                                    từ doanh thu khiêm tốn của The Yars Shop với tâm huyết và tinh
+                                    thần của tuổi trẻ.
                                 </p>
                             </div>
                         </div>
@@ -437,16 +456,12 @@
                                     Khoa Xian, nhà sáng lập DirtyCoins, đã tạo ra dấu ấn đáng kể
                                     trong làng thời trang đường phố tại Việt Nam. Sinh năm 1996, anh
                                     đã xây dựng DirtyCoins thành một thương hiệu được công nhận rộng
-                                    rãi, phổ biến trong cả cộng đồng chính thống và ngầm. Phong cách
-                                    đặc trưng của thương hiệu, được định hình bởi những thiết kế độc
-                                    đáo và ảnh hưởng văn hóa mạnh mẽ, đã thu hút sự chú ý của những
-                                    nhân vật nổi bật trong làng âm nhạcn.
+                                    rãi, phổ biến trong cả cộng đồng chính thống và ngầm.
                                 </p>
                                 <p class="content-text xyz-out">
-                                    Phong cách lãnh đạo và thương hiệu cá nhân của Khoa Xian đóng
-                                    vai trò quan trọng trong việc định hình văn hóa công ty. Anh
-                                    nhấn mạnh tầm quan trọng của việc duy trì một bản sắc riêng
-                                    không dễ dàng bị sao chép.
+                                    Phong cách đặc trưng của thương hiệu, được định hình bởi những
+                                    thiết kế độc đáo và ảnh hưởng văn hóa mạnh mẽ, đã thu hút sự chú
+                                    ý của những nhân vật nổi bật trong làng âm nhạc.
                                 </p>
                             </div>
                         </div>
@@ -494,9 +509,8 @@
                                     hơn 10 cửa hàng phủ sóng tại nhiều thành lớn.
                                 </p>
                                 <p class="content-text xyz-out">
-                                    Đến nay, Dirty Coins đã quá quen thuộc và tạo dựng được chỗ đứng
-                                    vững chắc trên thị trường streetwear Việt Nam. Thật không quá
-                                    khi nói rằng thương hiệu này đang là đại diện cho một phong cách
+                                    Đến nay, Dirty Coins đã tạo dựng được chỗ đứng vững chắc trên
+                                    thị trường streetwear Việt Nam, là đại diện cho một phong cách
                                     sống của giới trẻ hiện đại, dám thử thách và không ngừng tạo ra
                                     đột phá.
                                 </p>
@@ -519,15 +533,12 @@
                                     Dirty Coins được nhiều thương hiệu, vlogger cũng như rapper đình
                                     đám lựa chọn hợp tác vì sự năng động, vẻ đẹp cá tính và tạo thần
                                     thái “chất” thông qua sự phối kết hợp các bộ đồ và phụ kiện.
-                                    Trong đó nổi bật là HIEUTHUHAI, Binz, Bray, Fabo, Double2T, ...
                                 </p>
                                 <p class="content-text xyz-out">
                                     Cùng với sự bứt phá ngoạn mục của rap Việt trong năm nay là sự
-                                    đi lên của nhiều local brand. Chưa bao giờ những thương hiệu
-                                    "made in Việt Nam" được dân tình biết đến và yêu mến nhiều như
-                                    bây giờ. DirtyCoins đã rất hân hạnh khi được đồng hành cùng
-                                    chương trình RAP VIỆT, tài trợ các bộ đồ chuẩn "hip hop" cho các
-                                    rapper tham da chương trình.
+                                    đi lên của nhiều local brand. DirtyCoins đã rất hân hạnh khi
+                                    được đồng hành cùng chương trình RAP VIỆT, tài trợ các bộ đồ
+                                    chuẩn "hip hop" cho các rapper tham da chương trình.
                                 </p>
                             </div>
                         </div>

@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // initializeFullPage();
+    // mainApp();
+
     const progressBar = document.querySelector('.progress-bar');
 
     let images = document.images;
