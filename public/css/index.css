@@ -607,6 +607,7 @@ section:nth-child(even) .content-img-frame {
 .slide-content {
     display: flex;
     height: 100%;
+    padding: 0 40px;
 }
 
 .slide-content > div {
@@ -633,6 +634,7 @@ section:nth-child(even) .content-img-frame {
 
 .slide-video-container {
     position: relative;
+    max-width: 100%;
 }
 
 .slide-video video {
@@ -641,6 +643,7 @@ section:nth-child(even) .content-img-frame {
 }
 
 .slide-video img {
+    max-width: 100%;
     max-height: calc(100vh - 140px);
     height: 100%;
     width: auto;
@@ -956,6 +959,8 @@ body .fp-tooltip.fp-right {
 
     .slide-content {
         padding-top: 24px;
+        padding-left: 28px;
+        padding-right: 28px
     }
 
     .slide-collab {
