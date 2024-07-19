@@ -145,42 +145,31 @@
 
                     <script>
                         const numCircles = 52; // Number of small circles
+                        const circleBorder = document.querySelector('.circle-border');
+                        const circleSize = parseFloat(
+                            getComputedStyle(document.documentElement).getPropertyValue(
+                                '--small-logo-circle-size'
+                            )
+                        );
+                        const borderWidth = circleBorder.offsetWidth; // Get the current width of the circle-border
+                        const radius = borderWidth / 2 - circleSize / 2; // Adjusting for circle size
 
-                        function positionCircles() {
-                            const circleBorder = document.querySelector('.circle-border');
-                            const circleSize = parseFloat(
-                                getComputedStyle(document.documentElement).getPropertyValue(
-                                    '--small-logo-circle-size'
-                                )
-                            );
-                            const borderWidth = circleBorder.offsetWidth; // Get the current width of the circle-border
-                            const radius = borderWidth / 2 - circleSize / 2; // Adjusting for circle size
+                        circleBorder.innerHTML = ''; // Clear existing circles
 
-                            circleBorder.innerHTML = ''; // Clear existing circles
+                        for (let i = 0; i < numCircles; i++) {
+                            const angle = (i * 360) / numCircles; // Angle in degrees
+                            const radians = angle * (Math.PI / 180); // Convert to radians
 
-                            for (let i = 0; i < numCircles; i++) {
-                                const angle = (i * 360) / numCircles; // Angle in degrees
-                                const radians = angle * (Math.PI / 180); // Convert to radians
+                            const x = radius * Math.cos(radians) + borderWidth / 2 - circleSize / 2; // Adjusting for circle size
+                            const y = radius * Math.sin(radians) + borderWidth / 2 - circleSize / 2; // Adjusting for circle size
 
-                                const x =
-                                    radius * Math.cos(radians) + borderWidth / 2 - circleSize / 2; // Adjusting for circle size
-                                const y =
-                                    radius * Math.sin(radians) + borderWidth / 2 - circleSize / 2; // Adjusting for circle size
+                            const smallCircle = document.createElement('div');
+                            smallCircle.className = 'small-circle';
+                            smallCircle.style.left = `${x}px`;
+                            smallCircle.style.top = `${y}px`;
 
-                                const smallCircle = document.createElement('div');
-                                smallCircle.className = 'small-circle';
-                                smallCircle.style.left = `${x}px`;
-                                smallCircle.style.top = `${y}px`;
-
-                                circleBorder.appendChild(smallCircle);
-                            }
+                            circleBorder.appendChild(smallCircle);
                         }
-
-                        // Initial positioning
-                        positionCircles();
-
-                        // Reposition circles on window resize
-                        window.addEventListener('resize', positionCircles);
                     </script>
                 </div>
                 <img src="/public/img/logo_hand.png" alt="Logo hand" class="logo-hand" />
