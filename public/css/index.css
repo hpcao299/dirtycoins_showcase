@@ -946,6 +946,10 @@ body .fp-tooltip.fp-right {
     }
 }
 
+.slide-img-hide {
+    display: none;
+}
+
 @media screen and (max-width: 1558px) {
     .content-heading {
         font-size: 96px;
@@ -1348,6 +1352,14 @@ body .fp-tooltip.fp-right {
         justify-content: center;
     }
 
+    .slide-video-hide {
+        display: none;
+    }
+
+    .slide-img-hide {
+        display: flex;
+    }
+
     .slide-video video {
         height: 100%;
         max-width: calc(100vw - 65px);
@@ -1367,21 +1379,21 @@ body .fp-tooltip.fp-right {
     }
 
     .fp-controlArrow.fp-prev {
-        bottom: 0px !important;
-        left: -5px !important;
+        bottom: 4px !important;
+        left: 0px !important;
     }
 
     .fp-controlArrow.fp-prev:hover {
-        left: -5px !important;
+        left: -2px !important;
     }
 
     .fp-controlArrow.fp-next {
-        bottom: 0px !important;
-        right: -5px !important;
+        bottom: 4px !important;
+        right: 0px !important;
     }
 
     .fp-controlArrow.fp-next:hover {
-        right: -5px !important;
+        right: -2px !important;
     }
 
     .loading-screen .signature-y {
